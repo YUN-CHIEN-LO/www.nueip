@@ -1,9 +1,7 @@
-@import "./element-variable";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+// Common
+@import "common/var";
+@import "common/func";
+@import "common/mixin";
 * {
-  font-family: "Noto Sans", sans-serif;
-}
-html,
-body {
-  margin: 0;
+  font-family: $body-font-family;
 }
