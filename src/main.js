@@ -4,6 +4,7 @@ import router from "./router";
 import store from "./store";
 import ElementUI from "element-ui";
 import "./scss/index.scss";
+import "@mdi/font/css/materialdesignicons.min.css";
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
 new Vue({
