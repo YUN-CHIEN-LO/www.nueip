@@ -1,6 +1,8 @@
 <template>
   <el-container class="nu-layout">
-    <nu-navbar></nu-navbar>
+    <el-header class="nu-layout__header">
+      <nu-navbar></nu-navbar>
+    </el-header>
     <el-main>
       <router-view />
     </el-main>
@@ -54,6 +56,11 @@ export default {
 <style lang="scss" scoped>
 .nu-layout {
   position: relative;
-  border: solid 1px red;
+  margin-top: 60px;
+  &__header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
 }
 </style>

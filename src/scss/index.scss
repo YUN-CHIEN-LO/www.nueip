@@ -4,4 +4,7 @@
 @import "common/mixin";
 * {
   font-family: $body-font-family;
+  font-size: $body-font-size;
+  box-sizing: border-box;
+  color: $--color-text-primary;
 }
