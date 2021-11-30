@@ -1,0 +1,42 @@
+[
+  {
+    "id": "eform",
+    "url": "",
+    "img": "tour-icon-01.png"
+  },
+  {
+    "id": "approval",
+    "url": "",
+    "img": "tour-icon-02.png"
+  },
+  {
+    "id": "performanceappraisal",
+    "url": "",
+    "img": "tour-icon-03.png"
+  },
+  {
+    "id": "timeoff",
+    "url": "",
+    "img": "tour-icon-04.png"
+  },
+  {
+    "id": "shiftscheduling",
+    "url": "",
+    "img": "tour-icon-05.png"
+  },
+  {
+    "id": "companyintranet",
+    "url": "",
+    "img": "tour-icon-06.png"
+  },
+  {
+    "id": "payroll",
+    "url": "",
+    "img": "tour-icon-07.png"
+  },
+  {
+    "id": "attendance",
+    "url": "",
+    "img": "tour-icon-08.png"
+  }
+]

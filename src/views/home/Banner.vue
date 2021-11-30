@@ -1,25 +1,30 @@
 <template>
-  <div class="home-page__banner" :class="`home-page__banner--${rwdThreshold}`">
-    <div class="home-page__banner__wrapper">
+  <div class="home__banner" :class="`home__banner--${rwdThreshold}`">
+    <div class="home__banner__wrapper">
       <!-- 文字 -->
-      <div class="home-page__banner__text">
+      <div class="home__banner__text">
         <!-- 標題 -->
-        <div class="home-page__banner__title">{{ title }}</div>
+        <div class="home__banner__title">{{ title }}</div>
         <!-- 簡述 -->
-        <div class="home-page__banner__discription">{{ discription }}</div>
+        <div class="home__banner__discription">{{ discription }}</div>
         <!-- 連結 -->
         <div class="nueip__btn nueip__btn--solid" @click="$router.push(url)">
           {{ $t(linkLabel) }}
           <i class="mdi mdi-chevron-right"></i>
         </div>
         <!-- 影片 -->
-        <div v-if="video.length > 0" class="nueip__btn" @click="openVideo">
+        <div
+          v-if="video.length > 0"
+          v-show="rwdThreshold !== 'sm'"
+          class="nueip__btn"
+          @click="openVideo"
+        >
           {{ $t("links.video") }}
           <i class="mdi mdi-chevron-right"></i>
         </div>
       </div>
       <!-- 圖片 -->
-      <div class="home-page__banner__img">
+      <div class="home__banner__img">
         <!-- 大螢幕圖片 -->
         <img
           v-show="rwdThreshold !== 'sm'"
@@ -95,15 +100,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.home-page__banner {
-  width: 100%;
+.home__banner {
   position: relative;
+  width: 100%;
   height: calc(100vh - 60px);
-  background: url("../../assets/home/home-bg-line.webp");
-  background-repeat: repeat-y;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   &__wrapper {
     position: absolute;
     transform: translate(-50%, -50%);
@@ -140,7 +140,7 @@ export default {
   &--lg,
   &--md {
     padding: 20px;
-    & .home-page__banner {
+    & .home__banner {
       &__title {
         font-size: 40px;
       }
@@ -151,7 +151,7 @@ export default {
   }
   &--md,
   &--sm {
-    & .home-page__banner {
+    & .home__banner {
       &__wrapper {
         flex-direction: column-reverse;
       }
@@ -170,7 +170,7 @@ export default {
   }
   &--lg {
     align-items: center;
-    & .home-page__banner {
+    & .home__banner {
       &__text {
         flex-direction: column;
         justify-content: center;
@@ -188,7 +188,7 @@ export default {
     }
   }
   &--sm {
-    & .home-page__banner {
+    & .home__banner {
       &__wrapper {
         flex-direction: column-reverse;
         align-content: flex-end;
