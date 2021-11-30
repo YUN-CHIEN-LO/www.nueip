@@ -5,7 +5,7 @@
     v-clickoutside="hideMenu"
   >
     <!-- logo -->
-    <div class="nu-navbar__logo">
+    <div class="nu-navbar__logo" @click="$router.push('/')">
       <img src="@/assets/logo.svg" alt="Nueip Logo" srcset="" />
     </div>
     <!-- 導覽 -->
@@ -171,7 +171,7 @@ export default {
     }
   }
   &__menu {
-    transition-duration: 0.3s;;
+    transition-duration: 0.3s;
     overflow: visible;
     &__label {
       cursor: pointer;
