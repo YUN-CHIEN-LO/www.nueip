@@ -282,7 +282,7 @@ export default {
     width: 50px;
     height: 50px;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     margin: 5px;
     cursor: pointer;

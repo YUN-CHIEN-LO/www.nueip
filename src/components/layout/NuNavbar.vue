@@ -2,11 +2,7 @@
   <div
     class="nu-navbar"
     :class="{ 'is-close-menu': showMenu }"
-    v-clickoutside="
-      () => {
-        showMenu = false;
-      }
-    "
+    v-clickoutside="hideMenu"
   >
     <!-- logo -->
     <div class="nu-navbar__logo">
@@ -127,6 +123,12 @@ export default {
   },
   methods: {
     /**
+     * 收合導覽ㄋ
+     */
+    hideMenu() {
+      this.showMenu = false;
+    },
+    /**
      * 展開/收合導覽
      */
     toggleMenu() {
@@ -155,7 +157,6 @@ export default {
 .nu-navbar {
   width: 100%;
   height: 100%;
-  z-index: 1000;
   background-color: $--color-white;
   display: flex;
   justify-content: space-between;
@@ -170,7 +171,8 @@ export default {
     }
   }
   &__menu {
-    transition-duration: 0.3s;
+    transition-duration: 0.3s;;
+    overflow: visible;
     &__label {
       cursor: pointer;
     }
@@ -182,8 +184,8 @@ export default {
   }
   &__toggle {
     margin-right: 10px;
+    cursor: pointer;
     &__bar {
-      cursor: pointer;
       width: 30px;
       height: 5px;
       background-color: $--color-text-primary;
@@ -199,6 +201,7 @@ export default {
     & .nu-navbar {
       &__menu {
         display: flex;
+        overflow: visible;
         &__link {
           position: relative;
           & .mdi-plus {

@@ -64,6 +64,7 @@ export default {
     top: 0;
     width: 100%;
     height: 60px;
+    z-index: 1002;
   }
   &__main {
     margin-top: 60px;
