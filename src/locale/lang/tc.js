@@ -19,6 +19,15 @@ export default {
     price: "價格",
     login: "登入",
     free: "免費試用",
+    term: "服務條款",
+    privacy: "隱私權政策",
+  },
+  layout: {
+    freeTrialSloganA: "減少行政作業",
+    freeTrialSloganB: "專注核心事業",
+    freeTrialBtn: "立即免費試用",
+    copyRight:
+      "Copyright© 2021 人易科技股份有限公司. Copyright© 2021 NUEiP Technology Co., Ltd. All rights reserved.",
   },
   ...elLocale,
 };

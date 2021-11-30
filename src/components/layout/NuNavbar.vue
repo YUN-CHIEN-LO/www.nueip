@@ -130,21 +130,21 @@ export default {
      * 展開/收合導覽
      */
     toggleMenu() {
-      if (rwdThreshold(this.windowWidth) === "sm")
+      if (rwdThreshold(this.windowWidth) !== "lg")
         this.showMenu = !this.showMenu;
     },
     /**
      * 展開/收合 產品服務細項
      */
     toggleService() {
-      if (rwdThreshold(this.windowWidth) === "sm")
+      if (rwdThreshold(this.windowWidth) !== "lg")
         this.showService = !this.showService;
     },
     /**
      * 展開/收合 資訊專區細項
      */
     toggleInfo() {
-      if (rwdThreshold(this.windowWidth) === "sm")
+      if (rwdThreshold(this.windowWidth) !== "lg")
         this.showInfo = !this.showInfo;
     },
   },
@@ -161,6 +161,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   border-bottom: solid 3px $--color-info-lighter;
+  padding: 0px 20px;
   &__logo {
     height: 36px;
     cursor: pointer;

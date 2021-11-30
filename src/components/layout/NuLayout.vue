@@ -1,21 +1,22 @@
 <template>
-  <el-container class="nu-layout">
-    <el-header class="nu-layout__header">
+  <div class="nu-layout">
+    <div class="nu-layout__header">
       <nu-navbar></nu-navbar>
-    </el-header>
-    <el-main>
+    </div>
+    <div class="nu-layout__main">
       <router-view />
-    </el-main>
-    <el-footer>Footer</el-footer>
-  </el-container>
+    </div>
+    <div><nu-footer></nu-footer></div>
+  </div>
 </template>
 
 <script>
 import NuNavbar from "./NuNavbar.vue";
+import NuFooter from "./NuFooter.vue";
 import { mapGetters } from "vuex";
 export default {
   name: "NuLayout",
-  components: { NuNavbar },
+  components: { NuNavbar, NuFooter },
   computed: {
     ...mapGetters(["windowWidth"]),
   },
@@ -56,11 +57,14 @@ export default {
 <style lang="scss" scoped>
 .nu-layout {
   position: relative;
-  margin-top: 60px;
   &__header {
     position: fixed;
     top: 0;
     width: 100%;
+    height: 60px;
+  }
+  &__main {
+    margin-top: 60px;
   }
 }
 </style>
