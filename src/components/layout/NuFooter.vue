@@ -7,7 +7,7 @@
     ]"
   >
     <!-- 立即免費適試用 -->
-    <div class="nu-footer__free-trial">
+    <div v-show="!hideFreeTrial" class="nu-footer__free-trial">
       <!-- 標語 -->
       <div
         class="nu-footer__free-trial__slogan"
@@ -25,7 +25,7 @@
     <!-- 主要footer -->
     <div class="nu-footer__main">
       <!-- logo -->
-      <div class="nu-footer__main__logo">
+      <div class="nu-footer__main__logo" @click="$router.push('/')">
         <img src="@/assets/footer_logo.svg" alt="" />
       </div>
       <!-- 超連結 -->
@@ -145,6 +145,12 @@ import { mapGetters } from "vuex";
 import { rwdThreshold } from "@/utils";
 export default {
   name: "NuFooter",
+  props: {
+    hideFreeTrial: {
+      type: Boolean,
+      default: false,
+    },
+  },
   computed: {
     ...mapGetters(["windowWidth"]),
     isMobile() {
@@ -192,6 +198,7 @@ export default {
       display: flex;
       justify-content: center;
       align-items: flex-start;
+      cursor: pointer;
       & img {
         margin: 10px;
         width: 150px;
@@ -260,6 +267,7 @@ export default {
     width: 100%;
     z-index: 1000;
     padding: 5px;
+    min-width: 300px;
   }
   &__btn {
     display: inline-block;

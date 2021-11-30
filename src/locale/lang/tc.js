@@ -21,6 +21,11 @@ export default {
     free: "免費試用",
     term: "服務條款",
     privacy: "隱私權政策",
+    home: "首頁",
+  },
+  errorPage: {
+    warningA: "很抱歉，您所訪問的頁面不存在，您可以 返回",
+    warningB: "，或來信向我們回報此問題：",
   },
   layout: {
     freeTrialSloganA: "減少行政作業",

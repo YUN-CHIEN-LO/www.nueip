@@ -1,12 +1,14 @@
 <template>
   <div class="nu-layout">
     <div class="nu-layout__header">
-      <nu-navbar></nu-navbar>
+      <nu-navbar />
     </div>
     <div class="nu-layout__main">
       <router-view />
     </div>
-    <div><nu-footer></nu-footer></div>
+    <div class="nu-layout__footer">
+      <nu-footer :hideFreeTrial="hideFreeTrial" />
+    </div>
     <nu-back-top></nu-back-top>
   </div>
 </template>
@@ -21,6 +23,9 @@ export default {
   components: { NuNavbar, NuFooter, NuBackTop },
   computed: {
     ...mapGetters(["windowWidth"]),
+    hideFreeTrial() {
+      return this.$route.meta.hideFreeTrial;
+    },
   },
   mounted() {
     // 掛載監聽事件
@@ -59,6 +64,11 @@ export default {
 <style lang="scss" scoped>
 .nu-layout {
   position: relative;
+  &__header,
+  &__main,
+  &__footer {
+    min-width: 300px;
+  }
   &__header {
     position: fixed;
     top: 0;
