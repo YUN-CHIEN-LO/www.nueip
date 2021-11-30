@@ -24,7 +24,7 @@ const basicRoutes = [
       {
         name: "Home",
         path: "",
-        component: () => import("@/views/Home"),
+        component: () => import("@/views/home/Index.vue"),
       },
     ],
   },

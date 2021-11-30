@@ -22,6 +22,8 @@ export default {
     term: "服務條款",
     privacy: "隱私權政策",
     home: "首頁",
+    video: "觀看影片",
+    more: "了解更多",
   },
   errorPage: {
     warningA: "很抱歉，您所訪問的頁面不存在，您可以 返回",

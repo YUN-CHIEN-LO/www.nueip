@@ -1,0 +1,42 @@
+[
+  {
+    "id": "0",
+    "title": "歡慶LINE\n好友破十萬",
+    "discription": "雙重好禮簽約贈\n加碼再抽100天使用天數",
+    "url": "",
+    "linkLabel": "links.more",
+    "video": "https://www.youtube.com/watch?v=x4w9OkQWd_4&ab_channel=NUEiP%E4%BA%BA%E6%98%93%E7%A7%91%E6%8A%80",
+    "imagePc": "home/banner/banner9-pc.svg",
+    "imageMb": "home/banner/banner9-mb.svg"
+  },
+  {
+    "id": "1",
+    "title": "三大系統上線\n打造雲端新視野",
+    "discription": "現在加入雲端人資管理\n立即升級CRM與BI兩大系統",
+    "url": "",
+    "linkLabel": "links.more",
+    "video": "",
+    "imagePc": "home/banner/banner8-pc.svg",
+    "imageMb": "home/banner/banner8-mb.svg"
+  },
+  {
+    "id": "2",
+    "title": "全新Blog\n文章定期更新",
+    "discription": "法規、管理、溝通、辦公\n協助您解決企業管理問題",
+    "url": "",
+    "linkLabel": "links.more",
+    "video": "",
+    "imagePc": "home/banner/banner6-pc.svg",
+    "imageMb": "home/banner/banner6-mb.svg"
+  },
+  {
+    "id": "3",
+    "title": "企業管理\n化繁為簡",
+    "discription": "Make ut simple,\nkeep team strong.",
+    "url": "",
+    "linkLabel": "links.free",
+    "video": "",
+    "imagePc": "home/banner/banner.svg",
+    "imageMb": "home/banner/banner-mb.svg"
+  }
+]

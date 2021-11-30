@@ -18,7 +18,11 @@
         <h1>{{ $t("layout.freeTrialSloganB") }}</h1>
       </div>
       <!-- 連結按鈕 -->
-      <div class="nu-footer__btn" data-aos="fade-up" data-aos-duration="800">
+      <div
+        class="nueip__btn nueip__btn--inversed"
+        data-aos="fade-up"
+        data-aos-duration="800"
+      >
         {{ $t("layout.freeTrialBtn") }}
       </div>
     </div>
@@ -109,11 +113,11 @@
           <!-- 快捷鍵(大螢幕時出現) -->
           <div v-show="isMobile !== 'sm'" class="nu-footer__main__other__links">
             <!-- 免費試用 -->
-            <div class="nu-footer__btn is-inversed">
+            <div class="nueip__btn">
               {{ $t("links.free") }}
             </div>
             <!-- 聯絡我們 -->
-            <div class="nu-footer__btn is-inversed">
+            <div class="nueip__btn">
               {{ $t("links.login") }}
             </div>
           </div>
@@ -127,16 +131,18 @@
       {{ $t("layout.copyRight") }}
     </div>
     <!-- 快捷鍵(小螢幕時出現) -->
-    <div class="nu-footer__shortcut">
-      <!-- 免費試用 -->
-      <div class="nu-footer__btn">
-        {{ $t("links.free") }}
+    <transition name="fade">
+      <div v-show="isScroll > 0" class="nu-footer__shortcut">
+        <!-- 免費試用 -->
+        <div class="nueip__btn nueip__btn--inversed">
+          {{ $t("links.free") }}
+        </div>
+        <!-- 聯絡我們 -->
+        <div class="nueip__btn nueip__btn--inversed">
+          {{ $t("links.contact") }}
+        </div>
       </div>
-      <!-- 聯絡我們 -->
-      <div class="nu-footer__btn">
-        {{ $t("links.contact") }}
-      </div>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -152,7 +158,7 @@ export default {
     },
   },
   computed: {
-    ...mapGetters(["windowWidth"]),
+    ...mapGetters(["windowWidth", "isScroll"]),
     isMobile() {
       return rwdThreshold(this.windowWidth);
     },
@@ -269,20 +275,6 @@ export default {
     padding: 5px;
     min-width: 300px;
   }
-  &__btn {
-    display: inline-block;
-    color: $--color-white;
-    border: solid 3px $--color-white;
-    border-radius: 25px;
-    padding: 7px 15px;
-    cursor: pointer;
-    font-weight: bold;
-    margin: 5px;
-    &:hover {
-      background-color: $--color-white;
-      color: $--color-primary;
-    }
-  }
   &__icon {
     display: inline-block;
     border: solid 3px $--color-primary;
@@ -305,14 +297,6 @@ export default {
       & .mdi {
         color: $--color-white;
       }
-    }
-  }
-  & .is-inversed {
-    color: $--color-primary;
-    border: solid 3px $--color-primary;
-    &:hover {
-      background-color: $--color-primary;
-      color: $--color-white;
     }
   }
 }
