@@ -9,12 +9,16 @@
     <!-- 立即免費適試用 -->
     <div class="nu-footer__free-trial">
       <!-- 標語 -->
-      <div class="nu-footer__free-trial__slogan">
+      <div
+        class="nu-footer__free-trial__slogan"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <h1>{{ $t("layout.freeTrialSloganA") }}</h1>
         <h1>{{ $t("layout.freeTrialSloganB") }}</h1>
       </div>
       <!-- 連結按鈕 -->
-      <div class="nu-footer__btn">
+      <div class="nu-footer__btn" data-aos="fade-up" data-aos-duration="800">
         {{ $t("layout.freeTrialBtn") }}
       </div>
     </div>

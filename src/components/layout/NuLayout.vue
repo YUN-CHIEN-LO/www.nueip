@@ -7,16 +7,18 @@
       <router-view />
     </div>
     <div><nu-footer></nu-footer></div>
+    <nu-back-top></nu-back-top>
   </div>
 </template>
 
 <script>
 import NuNavbar from "./NuNavbar.vue";
 import NuFooter from "./NuFooter.vue";
+import NuBackTop from "./NuBackTop.vue";
 import { mapGetters } from "vuex";
 export default {
   name: "NuLayout",
-  components: { NuNavbar, NuFooter },
+  components: { NuNavbar, NuFooter, NuBackTop },
   computed: {
     ...mapGetters(["windowWidth"]),
   },
