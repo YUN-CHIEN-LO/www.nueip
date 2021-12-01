@@ -45,13 +45,4 @@ export default {
     font-weight: bold;
   }
 }
-// 顯示/消失動畫
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
 </style>

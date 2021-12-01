@@ -8,7 +8,7 @@
         <span class="page-error__link" @click="$router.push('/')">
           {{ $t("links.home") }}
         </span>
-        ，或來信向我們回報此問題：
+        {{ $t("errorPage.warningBs") }}
         <span class="page-error__link" href="mailto:service@nueip.com"
           >servie@nueip.com</span
         >

@@ -231,7 +231,8 @@ export default {
           left: 50%;
           transform: translateX(-50%);
           width: 150px;
-          background-color: rgba(255, 255, 255, 0.5);
+          background-color: rgba(255, 255, 255, 0.8);
+          border-bottom: solid 2px $--color-primary;
           & div {
             margin: 20px 10px;
             text-align: center;

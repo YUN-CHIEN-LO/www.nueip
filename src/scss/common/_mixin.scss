@@ -16,3 +16,12 @@
     @content;
   }
 }
+// 背景
+@mixin fixBgImg($url) {
+  background: url($url);
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}

@@ -8,3 +8,142 @@
   box-sizing: border-box;
   color: $--color-text-primary;
 }
+p {
+  line-height: 1.75;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.nueip {
+  // 公用 btn 樣式
+  &__btn {
+    display: inline-block;
+    border-radius: 25px;
+    padding: 7px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px;
+    border: solid 3px $--color-primary;
+    color: $--color-primary;
+    & i {
+      font-size: 24px;
+      line-height: 18px;
+      color: $--color-primary;
+      &:before {
+        transform: translateY(1px);
+      }
+    }
+    &:hover {
+      background-color: $--color-primary;
+      color: $--color-white;
+      & i {
+        color: $--color-white;
+      }
+    }
+    &--inversed {
+      border: solid 3px $--color-white;
+      color: $--color-white;
+      &:hover {
+        background-color: $--color-white;
+        color: $--color-primary;
+      }
+    }
+    &--solid {
+      background-color: $--color-primary;
+      color: $--color-white;
+      &:hover {
+        background-color: $--color-white;
+        color: $--color-primary;
+      }
+    }
+    &--dark {
+      border: solid 3px $--color-info;
+      color: $--color-info;
+      &:hover {
+        background-color: $--color-info;
+        color: $--color-white;
+      }
+    }
+    &--inversed,
+    &--solid {
+      & i {
+        color: $--color-white;
+      }
+      &:hover {
+        & i {
+          color: $--color-primary;
+        }
+      }
+    }
+  }
+}
+
+// 覆寫 slick carousel 左右按鈕的樣式
+.slick {
+  &-arrow {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1001;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
+    &:before {
+      position: absolute;
+      top: -50%;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: $--color-white;
+      font-size: 44px;
+      font-weight: bold;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 12px;
+      height: 12px;
+    }
+  }
+  &-prev {
+    left: 20px;
+    &:before {
+      content: "";
+    }
+    &:after {
+      left: calc(50% - 13px);
+      transform: translate(-50%, -50%) rotate(45deg);
+      border-bottom: solid 5px $--color-white;
+      border-left: solid 5px $--color-white;
+    }
+  }
+  &-next {
+    right: 20px;
+    &:before {
+      content: "";
+    }
+    &:after {
+      left: calc(50% - 3px);
+      transform: translate(-50%, -50%) rotate(45deg);
+      border-top: solid 5px $--color-white;
+      border-right: solid 5px $--color-white;
+    }
+  }
+}
+
+// 顯示/消失動畫
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
