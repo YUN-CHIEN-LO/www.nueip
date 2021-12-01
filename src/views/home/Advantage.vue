@@ -1,33 +1,41 @@
 <template>
   <div class="home-advantage" :class="rdwClasses">
-    <h1>選擇NUEiP的優勢</h1>
+    <h1>{{ $t("homePage.advantage.title") }}</h1>
     <div class="home-advantage__content">
-      <div class="home-advantage__block">
-        <h2>{{ $t("homePage.advantage1.title") }}</h2>
+      <div class="home-advantage__block" data-aos="fade-up">
+        <h2>{{ $t("homePage.advantage.item1.title") }}</h2>
         <img src="@/assets/home/advantage-item-01.svg" alt="" />
         <p>
-          {{ $t("homePage.advantage1.discription") }}
+          {{ $t("homePage.advantage.item1.discription") }}
         </p>
       </div>
-      <div class="home-advantage__block">
-        <h2>{{ $t("homePage.advantage2.title") }}</h2>
+      <div class="home-advantage__block" data-aos="fade-up" data-aos-delay="50">
+        <h2>{{ $t("homePage.advantage.item2.title") }}</h2>
         <img src="@/assets/home/advantage-item-02.svg" alt="" />
         <p>
-          {{ $t("homePage.advantage2.discription") }}
+          {{ $t("homePage.advantage.item2.discription") }}
         </p>
       </div>
-      <div class="home-advantage__block">
-        <h2>{{ $t("homePage.advantage3.title") }}</h2>
+      <div
+        class="home-advantage__block"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <h2>{{ $t("homePage.advantage.item3.title") }}</h2>
         <img src="@/assets/home/advantage-item-03.svg" alt="" />
         <p>
-          {{ $t("homePage.advantage3.discription") }}
+          {{ $t("homePage.advantage.item3.discription") }}
         </p>
       </div>
-      <div class="home-advantage__block">
-        <h2>{{ $t("homePage.advantage4.title") }}</h2>
+      <div
+        class="home-advantage__block"
+        data-aos="fade-up"
+        data-aos-delay="150"
+      >
+        <h2>{{ $t("homePage.advantage.item4.title") }}</h2>
         <img src="@/assets/home/advantage-item-04.svg" alt="" />
         <p>
-          {{ $t("homePage.advantage4.discription") }}
+          {{ $t("homePage.advantage.item4.discription") }}
         </p>
       </div>
     </div>

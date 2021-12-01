@@ -26,7 +26,9 @@
     <div class="home-page__security home-page--full">
       <home-security />
     </div>
-    <div class="home-page__number"></div>
+    <div class="home-page__number home-page--full">
+      <home-number :companyNum="1800" :lineNum="100000" :userNum="130000" />
+    </div>
     <div class="home-page__client"></div>
     <div class="home-page__media"></div>
   </div>
@@ -38,6 +40,7 @@ import HomeIntro from "./Intro.vue";
 import HomeThirdParty from "./ThirdParty.vue";
 import HomeAdvantage from "./Advantage.vue";
 import HomeSecurity from "./Security.vue";
+import HomeNumber from "./Number.vue";
 import BANNER from "@/json/BANNER.json";
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
@@ -52,6 +55,7 @@ export default {
     HomeThirdParty,
     HomeAdvantage,
     HomeSecurity,
+    HomeNumber,
   },
   data() {
     return {

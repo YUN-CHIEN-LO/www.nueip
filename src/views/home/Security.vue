@@ -1,36 +1,36 @@
 <template>
   <div class="home__security" :class="rdwClasses">
-    <h1>資料安全有保障</h1>
+    <h1>{{ $t("homePage.security.title") }}</h1>
     <div class="home__security__content">
-      <div class="home__security__block">
+      <div class="home__security__block" data-aos="fade">
         <img src="@/assets/home/security-item-01.svg" alt="" srcset="" />
-        <h2>連線安全</h2>
-        <p>SSL256bit加密傳輸</p>
+        <h2>{{ $t("homePage.security.item1.title") }}</h2>
+        <p>{{ $t("homePage.security.item1.discription") }}</p>
       </div>
-      <div class="home__security__block">
+      <div class="home__security__block" data-aos="fade">
         <img src="@/assets/home/security-item-02.svg" alt="" srcset="" />
-        <h2>資料儲存</h2>
-        <p>重要資訊加密儲存</p>
+        <h2>{{ $t("homePage.security.item2.title") }}</h2>
+        <p>{{ $t("homePage.security.item2.discription") }}</p>
       </div>
-      <div class="home__security__block">
+      <div class="home__security__block" data-aos="fade">
         <img src="@/assets/home/security-item-03.svg" alt="" srcset="" />
-        <h2>資料控管</h2>
-        <p>內部嚴格控管權限</p>
+        <h2>{{ $t("homePage.security.item3.title") }}</h2>
+        <p>{{ $t("homePage.security.item3.discription") }}</p>
       </div>
-      <div class="home__security__block">
+      <div class="home__security__block" data-aos="fade">
         <img src="@/assets/home/security-item-04.svg" alt="" srcset="" />
-        <h2>登入認證</h2>
-        <p>兩道密碼安全把關</p>
+        <h2>{{ $t("homePage.security.item4.title") }}</h2>
+        <p>{{ $t("homePage.security.item4.discription") }}</p>
       </div>
-      <div class="home__security__block">
+      <div class="home__security__block" data-aos="fade">
         <img src="@/assets/home/security-item-05.svg" alt="" srcset="" />
-        <h2>主機機房</h2>
-        <p>安全穩定(Google台灣機房)</p>
+        <h2>{{ $t("homePage.security.item5.title") }}</h2>
+        <p>{{ $t("homePage.security.item5.discription") }}</p>
       </div>
-      <div class="home__security__block">
+      <div class="home__security__block" data-aos="fade">
         <img src="@/assets/home/security-item-06.svg" alt="" srcset="" />
-        <h2>異地備援</h2>
-        <p>資料即時異地備援</p>
+        <h2>{{ $t("homePage.security.item6.title") }}</h2>
+        <p>{{ $t("homePage.security.item6.discription") }}</p>
       </div>
     </div>
   </div>

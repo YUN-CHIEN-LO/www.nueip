@@ -1,6 +1,6 @@
 <template>
   <div class="home__intro" :class="rdwClasses">
-    <h1 class="home__intro__title">零時差 無距離 高效率</h1>
+    <h1 class="home__intro__title">{{ $t("homePage.intro.title") }}</h1>
     <div class="home__intro__wrapper">
       <div class="home__intro__circle">
         <img src="@/assets/home/tour-circle.png" alt="" srcset="" />
@@ -28,9 +28,9 @@
         </div>
       </div>
       <div class="home__intro__content">
-        <h2>最人性化的雲端系統</h2>
+        <h2>{{ $t("homePage.intro.subtitle") }}</h2>
         <p>
-          秉持以「人」為本的信念，持續創新，注重使用者體驗，人資管理與流程管理，整合多種第三方雲端服務，系統包含八大核心功能，考勤、請假/加班、排班、簽核、薪資、績效考核、資訊中心和電子表單，減少行政作業時間，讓企業能專注核心事業。
+          {{ $t("homePage.intro.discription") }}
         </p>
       </div>
     </div>
