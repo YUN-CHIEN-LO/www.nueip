@@ -8,6 +8,11 @@
   box-sizing: border-box;
   color: $--color-text-primary;
 }
+p {
+  line-height: 1.75;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
 
 .nueip {
   &__btn {

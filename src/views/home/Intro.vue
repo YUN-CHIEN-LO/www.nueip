@@ -117,11 +117,9 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgba($--color-primary-light-9, 0.8);
   padding-bottom: 50px;
-  &__title {
-    font-weight: bold;
-    transition-duration: 0.3s;
+  & * {
+    z-index: 2;
   }
   &__content {
     text-align: center;
@@ -144,9 +142,6 @@ export default {
   }
   &--lg {
     & .home__intro {
-      &__title {
-        font-size: 48px;
-      }
       &__wrapper {
         width: 500px;
         height: 500px;
@@ -187,7 +182,6 @@ export default {
     & .home__intro {
       &__title {
         margin-top: 50px;
-        font-size: 32px;
       }
       &__wrapper {
         margin: 0px 15px;

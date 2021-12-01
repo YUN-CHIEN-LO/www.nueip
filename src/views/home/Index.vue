@@ -1,11 +1,7 @@
 <template>
-  <div class="home-page">
+  <div class="home-page" :class="rdwClasses">
     <!-- Banner 圖片 -->
-    <VueSlickCarousel
-      class="home-page__banner home-page--full"
-      :arrows="true"
-      fade
-    >
+    <VueSlickCarousel class="home-page__banner" :arrows="true" fade>
       <home-banner
         v-for="x in BANNER"
         :key="x.id"
@@ -21,7 +17,9 @@
     <div class="home-page__intro home-page--full">
       <home-intro />
     </div>
-    <div class="home-page__third-party"></div>
+    <div class="home-page__third-party home-page--full">
+      <home-third-party />
+    </div>
     <div class="home-page__advantage"></div>
     <div class="home-page__security"></div>
     <div class="home-page__number"></div>
@@ -33,16 +31,32 @@
 <script>
 import HomeBanner from "./Banner.vue";
 import HomeIntro from "./Intro.vue";
+import HomeThirdParty from "./ThirdParty.vue";
 import BANNER from "@/json/BANNER.json";
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
+import { mapGetters } from "vuex";
+import { rwdThreshold } from "@/utils";
 export default {
   name: "Home",
-  components: { HomeBanner, VueSlickCarousel, HomeIntro },
+  components: { HomeBanner, VueSlickCarousel, HomeIntro, HomeThirdParty },
   data() {
     return {
       BANNER: BANNER,
     };
+  },
+  computed: {
+    ...mapGetters(["windowWidth"]),
+    /**
+     * 判斷 RWD class
+     */
+    rdwClasses() {
+      if (rwdThreshold(this.windowWidth) === "sm") {
+        return "home-page--sm";
+      } else {
+        return "home-page--lg";
+      }
+    },
   },
 };
 </script>
@@ -52,6 +66,7 @@ export default {
   position: relative;
   &--full {
     width: 100%;
+    padding: 50px 20px;
   }
   &__banner {
     height: calc(100vh - 60px);
@@ -59,6 +74,35 @@ export default {
   }
   &__intro {
     @include fixBgImg("../../assets/home/home-bg.webp");
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($--color-primary-light-9, 0.8);
+    }
+  }
+  &__third-party {
+    @include fixBgImg("../../assets/home/home-bg-line.webp");
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  &--sm {
+    ::v-deep .home-page--full {
+      & h1 {
+        font-size: 32px;
+        font-weight: bold;
+      }
+    }
+  }
+  &--lg {
+    ::v-deep .home-page--full {
+      & h1 {
+        font-size: 48px;
+        font-weight: bold;
+      }
+    }
   }
 }
 </style>
