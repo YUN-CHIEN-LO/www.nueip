@@ -32,7 +32,9 @@
     <div class="home-page__client home-page--full">
       <home-client />
     </div>
-    <div class="home-page__media"></div>
+    <div class="home-page__media home-page--full">
+      <home-media />
+    </div>
   </div>
 </template>
 
@@ -44,6 +46,7 @@ import HomeAdvantage from "./Advantage.vue";
 import HomeSecurity from "./Security.vue";
 import HomeNumber from "./Number.vue";
 import HomeClient from "./Client.vue";
+import HomeMedia from "./Media.vue";
 import BANNER from "@/json/BANNER.json";
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
@@ -60,6 +63,7 @@ export default {
     HomeSecurity,
     HomeNumber,
     HomeClient,
+    HomeMedia,
   },
   data() {
     return {

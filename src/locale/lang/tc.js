@@ -100,6 +100,9 @@ export default {
     client: {
       title: "我們的客戶",
     },
+    media: {
+      title: "媒體報導",
+    },
   },
   layout: {
     freeTrialSloganA: "減少行政作業",
