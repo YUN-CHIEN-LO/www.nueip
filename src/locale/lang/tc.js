@@ -24,6 +24,7 @@ export default {
     home: "首頁",
     video: "觀看影片",
     more: "了解更多",
+    moreTestmonial: "更多客戶見證",
   },
   errorPage: {
     warningA: "很抱歉，您所訪問的頁面不存在，您可以 返回",
@@ -95,6 +96,9 @@ export default {
       company: "目前使用企業家數",
       line: "LINE打卡用戶數",
       user: "系統已使用人數",
+    },
+    client: {
+      title: "我們的客戶",
     },
   },
   layout: {

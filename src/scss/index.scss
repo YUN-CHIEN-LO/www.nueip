@@ -55,6 +55,14 @@ p {
         color: $--color-primary;
       }
     }
+    &--dark {
+      border: solid 3px $--color-info;
+      color: $--color-info;
+      &:hover {
+        background-color: $--color-info;
+        color: $--color-white;
+      }
+    }
     &--inversed,
     &--solid {
       & i {
