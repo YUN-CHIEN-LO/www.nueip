@@ -7,11 +7,14 @@
       :slidesToShow="slidesToShow"
     >
       <div v-for="x in HOME_MEDIA" :key="x.id" class="home__media__block">
+        <!-- 媒體報導 -->
         <div class="home__media__content">
+          <!-- 日期 -->
           <div class="home__media__date">
             <h2>{{ x.day }}</h2>
             <h3>{{ x.mon }}.{{ x.year }}</h3>
           </div>
+          <!-- 文字 -->
           <div class="home__media__text">
             <p>{{ x.media }}</p>
             <h2>{{ x.title }}</h2>
@@ -43,6 +46,9 @@ export default {
         return "home__media--sm";
       }
     },
+    /**
+     * 判斷要顯示幾張slide
+     */
     slidesToShow() {
       const rwd = rwdThreshold(this.windowWidth);
       if (rwd === "sm") return 1;

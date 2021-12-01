@@ -14,24 +14,31 @@
         :image-mb="x.imageMb"
       />
     </VueSlickCarousel>
+    <!-- 零時差 無距離 高效率 -->
     <div class="home-page__intro home-page--full">
       <home-intro />
     </div>
+    <!-- 全方位第三方雲端服務整合 -->
     <div class="home-page__third-party home-page--full">
       <home-third-party />
     </div>
+    <!-- 選擇NUEiP的優勢 -->
     <div class="home-page__advantage home-page--full">
       <home-advantage />
     </div>
+    <!-- 資料安全有保障 -->
     <div class="home-page__security home-page--full">
       <home-security />
     </div>
+    <!-- 數字 -->
     <div class="home-page__number home-page--full">
       <home-number :companyNum="1800" :lineNum="100000" :userNum="130000" />
     </div>
+    <!-- 我們的客戶 -->
     <div class="home-page__client home-page--full">
       <home-client />
     </div>
+    <!-- 媒體報導 -->
     <div class="home-page__media home-page--full">
       <home-media />
     </div>

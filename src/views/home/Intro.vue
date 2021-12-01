@@ -1,10 +1,15 @@
 <template>
   <div class="home__intro" :class="rdwClasses">
+    <!-- 標題 -->
     <h1 class="home__intro__title">{{ $t("homePage.intro.title") }}</h1>
+    <!-- 內容 -->
     <div class="home__intro__wrapper">
+      <!-- 圓圈 -->
       <div class="home__intro__circle">
         <img src="@/assets/home/tour-circle.png" alt="" srcset="" />
       </div>
+      <!-- icons -->
+      <!-- 前四個icon -->
       <div class="home__intro__icons">
         <div
           v-for="x in HOME_ICONS.slice(0, 4)"
@@ -16,6 +21,7 @@
           <img :src="require('@/assets/home/' + x.img)" alt="" srcset="" />
         </div>
       </div>
+      <!-- 後四個icon -->
       <div class="home__intro__icons">
         <div
           v-for="x in HOME_ICONS.slice(4, 8)"
@@ -27,6 +33,7 @@
           <img :src="require('@/assets/home/' + x.img)" alt="" srcset="" />
         </div>
       </div>
+      <!-- 文字 -->
       <div class="home__intro__content">
         <h2>{{ $t("homePage.intro.subtitle") }}</h2>
         <p>
@@ -62,6 +69,11 @@ export default {
     },
   },
   methods: {
+    /**
+     * 計算icon定位
+     *
+     * @param {string} id - icon 的 ids
+     */
     iconStyle(id) {
       let ret = {};
       if (rwdThreshold(this.windowWidth) === "sm") return ret;
@@ -137,7 +149,7 @@ export default {
     cursor: pointer;
     transition-duration: 0.1s;
     &:hover {
-      animation: throb 1s linear infinite;
+      animation: throb 1s -0.5s linear infinite;
     }
   }
   &--lg {

@@ -1,32 +1,40 @@
 <template>
   <div class="home__security" :class="rdwClasses">
+    <!-- 標題 -->
     <h1>{{ $t("homePage.security.title") }}</h1>
+    <!-- 內容 -->
     <div class="home__security__content">
+      <!-- 連線安全 -->
       <div class="home__security__block" data-aos="fade">
         <img src="@/assets/home/security-item-01.svg" alt="" srcset="" />
         <h2>{{ $t("homePage.security.item1.title") }}</h2>
         <p>{{ $t("homePage.security.item1.discription") }}</p>
       </div>
+      <!-- 資料儲存 -->
       <div class="home__security__block" data-aos="fade">
         <img src="@/assets/home/security-item-02.svg" alt="" srcset="" />
         <h2>{{ $t("homePage.security.item2.title") }}</h2>
         <p>{{ $t("homePage.security.item2.discription") }}</p>
       </div>
+      <!-- 資料控管 -->
       <div class="home__security__block" data-aos="fade">
         <img src="@/assets/home/security-item-03.svg" alt="" srcset="" />
         <h2>{{ $t("homePage.security.item3.title") }}</h2>
         <p>{{ $t("homePage.security.item3.discription") }}</p>
       </div>
+      <!-- 登入認證 -->
       <div class="home__security__block" data-aos="fade">
         <img src="@/assets/home/security-item-04.svg" alt="" srcset="" />
         <h2>{{ $t("homePage.security.item4.title") }}</h2>
         <p>{{ $t("homePage.security.item4.discription") }}</p>
       </div>
+      <!-- 主機機房 -->
       <div class="home__security__block" data-aos="fade">
         <img src="@/assets/home/security-item-05.svg" alt="" srcset="" />
         <h2>{{ $t("homePage.security.item5.title") }}</h2>
         <p>{{ $t("homePage.security.item5.discription") }}</p>
       </div>
+      <!-- 異地備援 -->
       <div class="home__security__block" data-aos="fade">
         <img src="@/assets/home/security-item-06.svg" alt="" srcset="" />
         <h2>{{ $t("homePage.security.item6.title") }}</h2>

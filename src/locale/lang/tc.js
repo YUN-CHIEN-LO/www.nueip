@@ -84,7 +84,7 @@ export default {
         discription: "兩道密碼安全把關",
       },
       item5: {
-        title: "機機房",
+        title: "主機機房",
         discription: "安全穩定(Google台灣機房)",
       },
       item6: {

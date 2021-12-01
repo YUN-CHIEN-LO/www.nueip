@@ -1,11 +1,14 @@
 <template>
   <div class="home__client" :class="rdwClasses">
+    <!-- 標題 -->
     <h1>{{ $t("homePage.client.title") }}</h1>
+    <!-- 客戶列表 -->
     <div class="home__client__content">
       <div v-for="x in HOME_CLIENTS" :key="x" class="home__client__block">
         <img :src="require('@/assets/home/clients/' + x)" alt="" />
       </div>
     </div>
+    <!-- 更多客戶見證 -->
     <div class="nueip__btn nueip__btn--dark">
       {{ $t("links.moreTestmonial") }}
     </div>

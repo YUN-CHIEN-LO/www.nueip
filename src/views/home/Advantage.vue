@@ -1,7 +1,9 @@
 <template>
   <div class="home-advantage" :class="rdwClasses">
+    <!-- 標題 -->
     <h1>{{ $t("homePage.advantage.title") }}</h1>
     <div class="home-advantage__content">
+      <!-- 試用期間即享有 專屬顧問協助導入 -->
       <div class="home-advantage__block" data-aos="fade-up">
         <h2>{{ $t("homePage.advantage.item1.title") }}</h2>
         <img src="@/assets/home/advantage-item-01.svg" alt="" />
@@ -9,6 +11,7 @@
           {{ $t("homePage.advantage.item1.discription") }}
         </p>
       </div>
+      <!-- 系統更新因應 最新法規，無痛升級 -->
       <div class="home-advantage__block" data-aos="fade-up" data-aos-delay="50">
         <h2>{{ $t("homePage.advantage.item2.title") }}</h2>
         <img src="@/assets/home/advantage-item-02.svg" alt="" />
@@ -16,6 +19,7 @@
           {{ $t("homePage.advantage.item2.discription") }}
         </p>
       </div>
+      <!-- 多國語系支援 跨國管理不擔心 -->
       <div
         class="home-advantage__block"
         data-aos="fade-up"
@@ -27,6 +31,7 @@
           {{ $t("homePage.advantage.item3.discription") }}
         </p>
       </div>
+      <!-- 多元管道即時通知 重要訊息不漏接 -->
       <div
         class="home-advantage__block"
         data-aos="fade-up"

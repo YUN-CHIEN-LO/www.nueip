@@ -1,13 +1,16 @@
 <template>
   <div class="home__number" :class="rdwClasses" ref="number">
+    <!-- 目前使用企業家數 -->
     <div class="home__number__block">
       <h2>{{ companyNumShow }} +</h2>
       <p>{{ $t("homePage.numbers.company") }}</p>
     </div>
+    <!-- LINE打卡用戶數 -->
     <div class="home__number__block">
       <h2>{{ lineNumShow }} +</h2>
       <p>{{ $t("homePage.numbers.line") }}</p>
     </div>
+    <!-- 系統已使用人數 -->
     <div class="home__number__block">
       <h2>{{ userNumShow }} +</h2>
       <p>{{ $t("homePage.numbers.user") }}</p>
@@ -34,6 +37,9 @@ export default {
     },
   },
   watch: {
+    /**
+     * 監聽element的scroll位置
+     */
     isScroll() {
       const topOffset = this.$refs.number.getBoundingClientRect().top;
       const windowHieght = window.innerHeight;
@@ -44,6 +50,7 @@ export default {
         }
       } else {
         if (windowHieght - topOffset < 0) {
+          // 重製counter
           this.flag = true;
           this.companyNumShow = 0;
           this.lineNumShow = 0;
@@ -75,13 +82,18 @@ export default {
     };
   },
   methods: {
+    /**
+     * 數字累加效果
+     */
     run() {
       const companyDiff = Math.floor(
         (this.companyNum - this.companyNumShow) * 0.1
       );
       const lineDiff = Math.floor((this.lineNum - this.lineNumShow) * 0.1);
       const userDiff = Math.floor((this.userNum - this.userNumShow) * 0.1);
+
       if (companyDiff === 0 && lineDiff === 0 && userDiff === 0) {
+        // 計算完成
         this.companyNumShow = this.companyNum;
         this.lineNumShow = this.lineNum;
         this.userNumShow = this.userNum;
