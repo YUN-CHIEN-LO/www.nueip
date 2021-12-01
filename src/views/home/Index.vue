@@ -20,7 +20,9 @@
     <div class="home-page__third-party home-page--full">
       <home-third-party />
     </div>
-    <div class="home-page__advantage"></div>
+    <div class="home-page__advantage home-page--full">
+      <home-advantage />
+    </div>
     <div class="home-page__security"></div>
     <div class="home-page__number"></div>
     <div class="home-page__client"></div>
@@ -32,6 +34,7 @@
 import HomeBanner from "./Banner.vue";
 import HomeIntro from "./Intro.vue";
 import HomeThirdParty from "./ThirdParty.vue";
+import HomeAdvantage from "./Advantage.vue";
 import BANNER from "@/json/BANNER.json";
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
@@ -39,7 +42,13 @@ import { mapGetters } from "vuex";
 import { rwdThreshold } from "@/utils";
 export default {
   name: "Home",
-  components: { HomeBanner, VueSlickCarousel, HomeIntro, HomeThirdParty },
+  components: {
+    HomeBanner,
+    VueSlickCarousel,
+    HomeIntro,
+    HomeThirdParty,
+    HomeAdvantage,
+  },
   data() {
     return {
       BANNER: BANNER,
@@ -67,6 +76,10 @@ export default {
   &--full {
     width: 100%;
     padding: 50px 20px;
+    ::v-deep h1 {
+      text-align: center;
+      font-weight: bold;
+    }
   }
   &__banner {
     height: calc(100vh - 60px);
@@ -88,11 +101,13 @@ export default {
     @include fixBgImg("../../assets/home/home-bg-line.webp");
     background-color: rgba(0, 0, 0, 0.7);
   }
+  &__advantage {
+    @include fixBgImg("../../assets/home/home-bg-line.webp");
+  }
   &--sm {
     ::v-deep .home-page--full {
       & h1 {
         font-size: 32px;
-        font-weight: bold;
       }
     }
   }
@@ -100,7 +115,6 @@ export default {
     ::v-deep .home-page--full {
       & h1 {
         font-size: 48px;
-        font-weight: bold;
       }
     }
   }

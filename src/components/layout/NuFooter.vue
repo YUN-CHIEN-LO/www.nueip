@@ -12,7 +12,7 @@
       <div
         class="nu-footer__free-trial__slogan"
         data-aos="fade-up"
-        data-aos-duration="1000"
+        data-aos-duration="500"
       >
         <h1>{{ $t("layout.freeTrialSloganA") }}</h1>
         <h1>{{ $t("layout.freeTrialSloganB") }}</h1>
@@ -21,7 +21,7 @@
       <div
         class="nueip__btn nueip__btn--inversed"
         data-aos="fade-up"
-        data-aos-duration="800"
+        data-aos-duration="500"
       >
         {{ $t("layout.freeTrialBtn") }}
       </div>
