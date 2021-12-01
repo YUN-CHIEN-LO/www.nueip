@@ -23,7 +23,9 @@
     <div class="home-page__advantage home-page--full">
       <home-advantage />
     </div>
-    <div class="home-page__security"></div>
+    <div class="home-page__security home-page--full">
+      <home-security />
+    </div>
     <div class="home-page__number"></div>
     <div class="home-page__client"></div>
     <div class="home-page__media"></div>
@@ -35,6 +37,7 @@ import HomeBanner from "./Banner.vue";
 import HomeIntro from "./Intro.vue";
 import HomeThirdParty from "./ThirdParty.vue";
 import HomeAdvantage from "./Advantage.vue";
+import HomeSecurity from "./Security.vue";
 import BANNER from "@/json/BANNER.json";
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
@@ -48,6 +51,7 @@ export default {
     HomeIntro,
     HomeThirdParty,
     HomeAdvantage,
+    HomeSecurity,
   },
   data() {
     return {
@@ -103,6 +107,10 @@ export default {
   }
   &__advantage {
     @include fixBgImg("../../assets/home/home-bg-line.webp");
+  }
+  &__security {
+    @include fixBgImg("../../assets/home/home-bg-line.webp");
+    background-color: rgba($--color-warning-light, 0.8);
   }
   &--sm {
     ::v-deep .home-page--full {
